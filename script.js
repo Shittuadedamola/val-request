@@ -8,6 +8,8 @@ var siz = 30
 const btns = document.querySelectorAll(".btn");
 const container = document.querySelector(".container");
 const yesContainer = document.querySelector(".yes-container");
+const yesVideo = document.querySelector(".yes-container video");
+
 
 window.addEventListener('DOMContentLoaded', function(){
     btns[1].innerHTML = noButtonWordings[ini]
@@ -20,6 +22,9 @@ btns.forEach(function(btn){
         if (answer.contains("yes")){
             container.style.display = "none"
             yesContainer.style.display = "flex"
+            yesVideo.play().catch(err => {
+            console.log("Safari autoplay fix:", err);
+    });
         }
 
         else if(answer.contains("no")){

@@ -54,3 +54,8 @@ body{
     z-index: 1;
     transition: opacity 0.3s ease;
 }
+
+video{
+    height: 400px;
+    width: 300px;
+}
